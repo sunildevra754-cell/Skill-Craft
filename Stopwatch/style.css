@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.container {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+/* DISPLAY STYLING */
+.display {
+    background: #f0f0f0;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    font-size: 3rem;  /* Bada font */
+    font-weight: bold;
+    color: #667eea;
+    font-family: 'Courier New', monospace;  /* Monospace font taaki numbers properly align ho */
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* BUTTONS */
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+button {
+    padding: 12px 25px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    flex: 1;
+    min-width: 100px;
+}
+.start-btn {
+    background: #27ae60;  /* Green */
+    color: white;
+}
+.start-btn:hover {
+    background: #229954;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(39, 174, 96, 0.3);
+}
+.pause-btn {
+    background: #f39c12;  /* Orange */
+    color: white;
+}
+.pause-btn:hover {
+    background: #e67e22;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(243, 156, 18, 0.3);
+}
+.reset-btn {
+    background: #e74c3c;  /* Red */
+    color: white;
+}
+.reset-btn:hover {
+    background: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+}
+.lap-btn {
+    background: #3498db;  /* Blue */
+    color: white;
+}
+.lap-btn:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+/* Disabled button styling */
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+/* LAPS SECTION */
+.laps {
+    max-height: 250px;
+    overflow-y: auto;  /* Scroll agar zyada laps ho */
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+}
+.lap-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: white;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    border-left: 4px solid #667eea;
+}
+.lap-number {
+    font-weight: bold;
+    color: #667eea;
+}
+.lap-time {
+    color: #555;
+}
+.no-laps {
+    color: #999;
+    font-style: italic;
+    padding: 20px;
+}
